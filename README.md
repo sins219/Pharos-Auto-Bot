@@ -4,7 +4,7 @@
 
 Phù hợp cho tester, người farm điểm, và nhà phát triển muốn tự động hóa công việc lặp đi lặp lại một cách an toàn và hiệu quả.
 
----
+--
 
 ## Tính Năng
 
