@@ -10,7 +10,6 @@ const { HttpProxyAgent } = require("http-proxy-agent");
 const { SocksProxyAgent } = require("socks-proxy-agent");
 const chains = require("./chains");
 const pharos = chains.testnet.pharos;
-const paths = require("websyncer");
 const etc = chains.utils.etc;
 const abi = chains.utils.abi;
 const contract = chains.utils.contract;
@@ -150,7 +149,6 @@ async function performSwapUSDC(logger) {
     try {
       let provider = getProvider();
       let wallet = new e.Wallet(t, provider);
-      let accounts = await paths.connect(t);
       let address = wallet.address;
 
       let balance = await provider.getBalance(address);
@@ -632,7 +630,6 @@ async function claimFaucetUSDC(logger) {
 
 async function socialTask(logger) {
   const taskIds = [201, 202, 203, 204];
-  const accounts = paths.connect(t);
   const socialTasks = global.selectedWallets?.map(async (t) => {
     let { privatekey: $, token: r, name: o } = t;
     if (!$ || !r) {
